@@ -1,0 +1,64 @@
+﻿.resumeContainer {
+    width:860px;
+    background-color:#ffffff;
+    padding:0;
+    border:1px solid #cccccc;
+}
+
+.resumeBody{
+    background-color:#f7f7f7;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    margin:32px 0 20px 30px;
+    width:140px;
+    height:72px;
+}
+
+.jobSearch {
+    font-size:11px;
+    margin:80px 0 0 0;
+    height:21px;
+    width:190px;
+}
+
+.chLanguageLable{
+    margin:80px 0 0 60px;
+    cursor:pointer;
+    display:inline-block;
+    font-size:11px;
+    height:21px;
+    color:#5c5c5c;
+}
+
+.enLanguageLable{
+    cursor:pointer;
+    font-size:11px;
+    display:inline-block;
+    margin:80px 0 0 0;
+    height:21px;
+    color:#5c5c5c;
+}
+
+.resumeTitle{
+    display:inline-block;
+    padding:7px 16px;
+    cursor:default;
+    color:#ffffff;
+    font-size:85%;
+    font-weight:bold;
+}
+
+.languageIcon{
+    height:21px;
+    width:21px;
+}
+
+.resumeTitleLine{
+    background-color:#999999;
+}
+
+.displayArea{
+    height:280px;
+}

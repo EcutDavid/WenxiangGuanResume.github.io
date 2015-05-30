@@ -9,4 +9,8 @@
         $scope.submit = function () {
             $scope.todoList.push({ name: $scope.nameInputText, description: $scope.descriptionInputText });
         }
+
+        setInterval(function () {
+            console.log($scope.nameInputText);
+        }, 1000)
     });

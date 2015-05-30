@@ -1,41 +1,62 @@
 ﻿<!DOCTYPE html>
 <html ng-app="TODO">
 <head>
-    <title>Hello bootstrap</title>
+    <title>WenxiangGuan's Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/resume.css" rel="stylesheet" />
+    <script src="Script/jquery-1.10.2.min.js"></script>
     <script src="Script/angular.js"></script>
-    <script src="Script/Main.js"></script>
-    <link href="Content/todo.css" rel="stylesheet" />
-</head>
-<body ng-controller="controller">
-    <div class="container">
-        <div class="page-header">
-            <h1> {{name}} TodoList</h1>
-        </div>
-        <div class="row">
-            <div class="panel col-lg-8">
-                <table class="table table-hover table-bordered">
-                    <thead>
-                        <tr><td>Name</td><td>Description</td><td>Done</td></tr>
-                    </thead>
-                    <tbody ng-repeat="item in todoList">
-                        <tr class="done-{{item.done}}"><td>{{item.name}}</td><td>{{item.description}}</td><td><input type="checkbox" ng-model="item.done" /></td></tr>
-                    </tbody>
-                </table>
-            </div>
+    <script src="Script/resume.js"></script>
+    <script>
+        angular.module("TODO", [])
+    .controller("resumeController", function ($scope) {
+        var imageSum = 2;
+        var imageCounter = 1;
+        setInterval(function () {
+            console.log('#displayImage' + imageCounter.toString());
+            $('#displayImage' + imageCounter.toString()).fadeOut(function () {
+                if (++imageCounter > imageSum)
+                    imageCounter = 1;
+                $('#displayImage' + imageCounter).fadeIn();
+            });
+        }, 4000);
 
-            <div class="panel col-lg-4">
-                <div class="form-group">
-                    <label>Name<input class="form-control" ng-model="nameInputText" /></label>
-                    <label>Description<input class="form-control" ng-model="descriptionInputText" /></label>
-                    <span class="input-group">
-                        <input type="submit" class="btn btn-info" value="Add" ng-click="submit()" />
-                    </span>
-                </div>
+    });
+    </script>
+</head>
+<body ng-controller="resumeController" class="resumeBody">
+    <div class="resumeContainer container">
+        <div class="row">
+            <div class="col-sm-5">
+                <img class="logo " src="images/Personal resumeLOGO.png" />
+            </div>
+            <div class="col-sm-3">
+                <input class="jobSearch form-control" ng-model="nameInputText" placeholder="期望工作：WPF或WEB开发" />
+            </div>
+            <div class="col-sm-2">
+                <label class="chLanguageLable"><img src="images/ChVerResume.png" class="languageIcon" />中文</label>
+            </div>
+            <div class="col-sm-2">
+                <label class="enLanguageLable"><img src="images/EngVerResume.png" class="languageIcon" />English</label>
             </div>
         </div>
+        <div class="resumeTitleLine">
+            <span class="resumeTitle">Company</span>
+            <span class="resumeTitle">标题A</span>
+            <span class="resumeTitle">标题A</span>
+            <span class="resumeTitle">标题A</span>
+            <span class="resumeTitle">标题A</span>
+            <span class="resumeTitle">标题A</span>
+        </div>
+        <div class="displayArea">
+            <img src="images/LindgeSelfPic.png" id="displayImage1"/>
+            <img src="images/SelfPiceCut.png" id="displayImage2" style="display:none" />
+        </div>
+        <div style="height:28px; background-color:#003f6b">滚动条区域</div>
+        <div style="height:480px"><h1>简历内容区域</h1></div>
+        <div>FOOTER</div>
     </div>
 </body>
 </html>
