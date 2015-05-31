@@ -8,7 +8,7 @@ angular.module("TODO", [])
         //Display Image Stuff
         var imageSum = 3;
         var imageCounter = 1;
-        var imageRefreshInterval = 4400;
+        var imageRefreshInterval = 5000;
         //Display Image Stuff End
         changeStoryToEnVer();
         //resumeTitle Stuff
@@ -77,6 +77,7 @@ angular.module("TODO", [])
 
         $scope.introduceItemFontStyle = "enIntroduceItem";
         $scope.projectTitle = "Project experience";
+        $scope.titleName = "Wenxiang Guan's Resume";
 
         $scope.changeLanguage = function (language) {
             if (language == 'CH') {
@@ -94,6 +95,7 @@ angular.module("TODO", [])
                 $scope.introduceItemFontStyle = "chIntroduceItem";
                 $('.introduveItem').css({ "font-size": "12px" });
                 changeStoryToChVer();
+                $scope.titleName = "官文祥的简历";
             }
             else {
                 $scope.placeHolderText = "Hope Job: WPF or WEB dev";
@@ -109,6 +111,7 @@ angular.module("TODO", [])
                 $scope.introduceItemFontStyle = "enIntroduceItem";
                 $('.introduveItem').css({ "font-size": "11px" });
                 changeStoryToEnVer();
+                $scope.titleName = "Wenxiang Guan's Resume";
             }
         }
 
@@ -124,7 +127,7 @@ angular.module("TODO", [])
         }, imageRefreshInterval);
 
 
-        var projectRefreshInterval = 3000;
+        var projectRefreshInterval = 4500;
         var projectRefreshCounter = 0;
         var projectRefreshSum = 8;
         var projectRefreshDir = true;
@@ -135,7 +138,7 @@ angular.module("TODO", [])
                 --projectRefreshCounter;
             if (projectRefreshCounter == projectRefreshSum)
             {
-                projectRefreshCounter = 7;
+                projectRefreshCounter = projectRefreshSum - 1;
                 projectRefreshDir = false;
             }
             if (projectRefreshCounter < 0)
@@ -165,7 +168,7 @@ angular.module("TODO", [])
 
         function changeStoryToEnVer() {
             $scope.Story1 = 'Freshman and sophomore year, mainly focus on embedded system development, coding for lot\'s of MCU (MSP430, AVR, STM32...). participate in some projects. Main harvest: cultivate the rigorous programming thinking and basic code optimize & debugging method.'
-            $scope.Story2 = 'love reading, learn desktop application development from books in sophomore year, and use this technology in project(communication with embedded system module for conrtol purpose).technical aspect, Main reading classic books, such as：\
+            $scope.Story2 = 'Love reading, learn desktop application development from books in sophomore year, and use this technology in project(communication with embedded system module for conrtol purpose).technical aspect, Main reading classic books, such as：\
             《C# in Depth》,《CLR via C#》,《Pro WPF in C#》,《Agile Principles Patterns and Practices》,《JavaScript: The Definitive Guide》,etc...'
             $scope.Story3 = 'Persist in coding practise，Writing blog(www.cnblogs.com/E-WALKER),use microsoft TFS (davidguan.visualstudio.com), GITHUB(github.com/EcutDavid) as code repositories.';
             $scope.Story4 = 'Teamwork, careful discussion with team members prior to the start of the sprint, reach a consensus, is the first step in each sprint, if there is problem which cannot solved by team, I will use google and Stack Overflow to search answer.';
