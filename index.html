@@ -2,51 +2,23 @@
 <html ng-app="TODO">
 <head>
     <title>WenxiangGuan's Resume</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
     <link href="Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/resume.css" rel="stylesheet" />
     <script src="Script/jquery-1.10.2.min.js"></script>
     <script src="Script/angular.js"></script>
     <script src="Script/resume.js"></script>
-    <script>
-        angular.module("TODO", [])
-    .controller("resumeController", function ($scope) {
-        //Display Image Stuff
-        var imageSum = 3;
-        var imageCounter = 1;
-        var imageRefreshInterval = 4000;
-        //Display Image StuffEnd
-
-
-        $scope.changeLanguage = function (language) {
-            console.log(language);
-        }
-
-        setInterval(function () {
-            if (imageCounter == 3)
-                changeDisplayPic(imageCounter, 1);
-            else
-                changeDisplayPic(imageCounter, imageCounter + 1);
-            imageCounter++;
-        }, imageRefreshInterval);
-
-        function changeDisplayPic(displayNowIndex, displayReplaceIndex) {
-            $('#displayImage' + displayNowIndex).fadeOut(function () {
-                $('#displayImage' + displayReplaceIndex).fadeIn();
-            });
-        }
-    });
-    </script>
 </head>
 <body ng-controller="resumeController" class="resumeBody">
     <div class="resumeContainer container">
         <div class="row">
             <div class="col-sm-5">
-                <img class="logo " src="images/Personal resumeLOGO.png" />
+                <img class="logo" id="CHlogo" src="images/Personal resumeLOGO.png" style="display:none" />
+                <img class="logo" id="ENlogo" src="images/David Guan.png"/>
             </div>
             <div class="col-sm-3">
-                <input class="jobSearch form-control" ng-model="nameInputText" placeholder="期望工作：WPF或WEB开发" />
+                <input class="jobSearch form-control" ng-model="nameInputText" placeholder="{{placeHolderText}}" />
             </div>
             <div class="col-sm-2">
                 <label class="chLanguageLable" ng-click="changeLanguage('CH')"><img src="images/ChVerResume.png" class="languageIcon" />中文</label>
@@ -56,25 +28,34 @@
             </div>
         </div>
         <div class="resumeTitleLine">
-            <span class="resumeTitle">Company</span>
-            <span class="resumeTitle">标题A</span>
-            <span class="resumeTitle">标题A</span>
-            <span class="resumeTitle">标题A</span>
-            <span class="resumeTitle">标题A</span>
-            <span class="resumeTitle">标题A</span>
+            <span ng-repeat="item in resumeTitleList">
+                <span class="resumeTitle">{{item}}</span>
+            </span>
         </div>
         <div class="displayArea">
             <img src="images/LindgeSelfPic.png" id="displayImage1" />
             <img src="images/SelfPiceCut.png" id="displayImage2" style="display:none" />
             <img src="images/MDSelfPic.png" id="displayImage3" style="display:none" />
-            <!--<div class="picButtonArea"></div>-->
         </div>
-        <div class="flashLine">滚动条区域</div>
+        <div class="flashLine">
+            <div class="row">
+                <div class="flashLineTitle">{{projectTitle}}</div>
+                <div class="flashLineContent">
+                    <div ng-repeat="item in projectList" style="height:28px">{{item}}</div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-2">
-                <img src="images/Self.png"/>
+                <img class="topLeftImage" src="images/Self.png" />
+                <div ng-repeat="item in skillList">
+                    <p class="skillIntroduceItem">{{item}}</p>
+                </div>
             </div>
             <div class="col-sm-4">
+                <div ng-repeat="item in slefIntroducelist">
+                    <p class="introduveItem {{introduceItemFontStyle}}">&nbsp;{{item}}</p>
+                </div>
             </div>
             <div class="col-sm-6">
                 <img class="topRightImage" src="images/TopRight.png" />
@@ -91,7 +72,59 @@
                 <img class="middleImage" src="images/MCU.png" />
             </div>
         </div>
-        <div>FOOTER</div>
+        <div class="stroyArea">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/Quad copter.png"/>
+                </div>
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story1}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story2}}
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/BOOK.png" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/Coding.png" />
+                </div>
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story3}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story4}}   
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/Chat.png" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="images/WalkAbout.png" />
+                </div>
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story5}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 storyAreaTextRight">
+                    {{Story6}}
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/Inspiration.png" />
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            Wenxiang Guan's Resume
+        </div>
     </div>
 </body>
 </html>

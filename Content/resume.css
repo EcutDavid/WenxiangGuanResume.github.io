@@ -1,80 +1,102 @@
 ﻿.resumeContainer {
-    width:860px;
-    background-color:#ffffff;
-    padding:0;
-    border:1px solid #cccccc;
+    width: 860px;
+    background-color: #ffffff;
+    padding: 0;
+    border: 1px solid #cccccc;
 }
 
-.resumeBody{
-    background-color:#f7f7f7;
-    font-family:Verdana, Arial, Helvetica, sans-serif;
+.resumeBody {
+    background-color: #f7f7f7;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
-.logo{
-    margin:32px 0 20px 30px;
-    width:140px;
-    height:72px;
+.logo {
+    margin: 32px 0 20px 30px;
+    width: 140px;
+    height: 72px;
 }
 
 .jobSearch {
-    font-size:11px;
-    margin:80px 0 0 0;
-    height:21px;
-    width:190px;
+    font-size: 11px;
+    margin: 80px 0 24px 0;
+    height: 21px;
+    width: 190px;
 }
 
-.chLanguageLable{
-    margin:80px 0 0 60px;
-    cursor:pointer;
-    display:inline-block;
-    font-size:11px;
-    height:21px;
-    color:#5c5c5c;
+.chLanguageLable {
+    margin: 80px 0 0 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    height: 21px;
+    color: #5c5c5c;
 }
 
-.enLanguageLable{
-    cursor:pointer;
-    font-size:11px;
-    display:inline-block;
-    margin:80px 0 0 0;
-    height:21px;
-    color:#5c5c5c;
+.enLanguageLable {
+    cursor: pointer;
+    font-size: 11px;
+    display: inline-block;
+    margin: 80px 0 0 0;
+    height: 21px;
+    color: #5c5c5c;
 }
 
-.resumeTitle{
-    display:inline-block;
-    padding:7px 16px;
-    cursor:default;
-    color:#ffffff;
-    font-size:85%;
-    font-weight:bold;
+.resumeTitle {
+    font-family:  arial 'Microsoft YaHei' 'Microsoft Himalaya';
+    display: inline-block;
+    padding: 7px 16px;
+    cursor: default;
+    color: #ffffff;
+    font-size: 85%;
+    font-weight: bold;
 }
 
-.languageIcon{
-    height:21px;
-    width:21px;
+.languageIcon {
+    height: 21px;
+    width: 21px;
 }
 
-.resumeTitleLine{
-    background-color:#999999;
+.resumeTitleLine {
+    background-color: #999999;
 }
 
-.displayArea{
-    height:280px;
+.displayArea {
+    height: 280px;
 }
 
-.picButtonArea{
-    width:100px;
-    height:20px;
-    display:inline-block;
-    position:relative;
-    background-color:ActiveCaption
+.picButtonArea{ 
+    width: 100px;
+    height: 20px;
+    display: inline-block;
+    position: relative;
+    background-color: ActiveCaption;
 }
 
-.flashLine{
-    height:28px; 
-    background-color:#003f6b;
-    margin:0 0 20px 0;
+.flashLine {
+    height: 28px;
+    background-color: #003f6b;
+    margin: 0 0 20px 0;
+    color:#FFFFFF;
+}
+
+.flashLineTitle{
+  border-right: 1px solid #4D94A6;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 15px;
+  padding:2px 5px 2px 0;
+  position: relative;
+  top: 4px;
+}
+
+.flashLineContent{
+  float: left;
+  font-size: 11px;
+  margin-left: 15px;
+  padding:2px 5px 2px 0;
+  position: relative;
+  top: 4px;
 }
 
 .middleImage {
@@ -89,9 +111,72 @@
     -webkit-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid #c1d3df;
-    margin:20px 0 30px 0;
+    margin: 20px 0 30px 20px;
 }
 
-.row{
-    padding:0 30px;
+.topLeftImage {
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.row {
+    padding: 0 30px;
+    overflow:hidden;
+}
+
+/*.introduceHeader {
+    color: #003f6b;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    text-decoration: none;
+}*/
+
+.introduveItem {
+    font-family:  arial 'Microsoft YaHei' 'Microsoft Himalaya';
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    list-style:none;
+    padding:0;
+}
+
+.enIntroduceItem{
+    font-size:11px !important;
+}
+
+.skillIntroduceItem{
+    font-family:  arial 'Microsoft YaHei' 'Microsoft Himalaya';
+    font-size: 10px;
+    font-weight: normal;
+    margin-left: 12px;
+    margin-bottom: 2px;
+    list-style:none;
+    padding:0;
+}
+
+.stroyArea{
+    margin:40px 0 0 0;
+    border-top:2px solid;
+}
+
+
+.modal-footer {
+    text-align:center;
+    color: #003f6b;
+    font-family: arial;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.storyAreaTextRight{
+    color:#49b1ee;
+    font-family: arial 'Microsoft YaHei' 'Microsoft Himalaya';
+    font-size: 17px;
+    padding:25px 40px 0 85px;
 }
