@@ -172,7 +172,7 @@ angular.module("TODO", [])
             《C# in Depth》,《CLR via C#》,《Pro WPF in C#》,《Agile Principles Patterns and Practices》,《JavaScript: The Definitive Guide》,etc...'
             $scope.Story3 = 'Persist in coding practise，Writing blog(www.cnblogs.com/E-WALKER),use microsoft TFS (davidguan.visualstudio.com), GITHUB(github.com/EcutDavid) as code repositories.';
             $scope.Story4 = 'Teamwork, careful discussion with team members prior to the start of the sprint, reach a consensus, is the first step in each sprint, if there is problem which cannot solved by team, I will use google and Stack Overflow to search answer.';
-            $scope.Story5 = 'Like mountain climbing and walkabout.';
+            $scope.Story5 = 'Be fond of mountain climbing and walkabout.';
             $scope.Story6 = 'Hope I can join you, coding together, Together to create inspiration！';
         }
     });
