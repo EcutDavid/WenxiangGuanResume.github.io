@@ -12,17 +12,30 @@
     <script>
         angular.module("TODO", [])
     .controller("resumeController", function ($scope) {
-        var imageSum = 2;
+        //Display Image Stuff
+        var imageSum = 3;
         var imageCounter = 1;
-        setInterval(function () {
-            console.log('#displayImage' + imageCounter.toString());
-            $('#displayImage' + imageCounter.toString()).fadeOut(function () {
-                if (++imageCounter > imageSum)
-                    imageCounter = 1;
-                $('#displayImage' + imageCounter).fadeIn();
-            });
-        }, 4000);
+        var imageRefreshInterval = 4000;
+        //Display Image StuffEnd
 
+
+        $scope.changeLanguage = function (language) {
+            console.log(language);
+        }
+
+        setInterval(function () {
+            if (imageCounter == 3)
+                changeDisplayPic(imageCounter, 1);
+            else
+                changeDisplayPic(imageCounter, imageCounter + 1);
+            imageCounter++;
+        }, imageRefreshInterval);
+
+        function changeDisplayPic(displayNowIndex, displayReplaceIndex) {
+            $('#displayImage' + displayNowIndex).fadeOut(function () {
+                $('#displayImage' + displayReplaceIndex).fadeIn();
+            });
+        }
     });
     </script>
 </head>
@@ -36,10 +49,10 @@
                 <input class="jobSearch form-control" ng-model="nameInputText" placeholder="期望工作：WPF或WEB开发" />
             </div>
             <div class="col-sm-2">
-                <label class="chLanguageLable"><img src="images/ChVerResume.png" class="languageIcon" />中文</label>
+                <label class="chLanguageLable" ng-click="changeLanguage('CH')"><img src="images/ChVerResume.png" class="languageIcon" />中文</label>
             </div>
             <div class="col-sm-2">
-                <label class="enLanguageLable"><img src="images/EngVerResume.png" class="languageIcon" />English</label>
+                <label class="enLanguageLable" ng-click="changeLanguage('EN')"><img src="images/EngVerResume.png" class="languageIcon" />English</label>
             </div>
         </div>
         <div class="resumeTitleLine">
@@ -51,11 +64,33 @@
             <span class="resumeTitle">标题A</span>
         </div>
         <div class="displayArea">
-            <img src="images/LindgeSelfPic.png" id="displayImage1"/>
+            <img src="images/LindgeSelfPic.png" id="displayImage1" />
             <img src="images/SelfPiceCut.png" id="displayImage2" style="display:none" />
+            <img src="images/MDSelfPic.png" id="displayImage3" style="display:none" />
+            <!--<div class="picButtonArea"></div>-->
         </div>
-        <div style="height:28px; background-color:#003f6b">滚动条区域</div>
-        <div style="height:480px"><h1>简历内容区域</h1></div>
+        <div class="flashLine">滚动条区域</div>
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="images/Self.png"/>
+            </div>
+            <div class="col-sm-4">
+            </div>
+            <div class="col-sm-6">
+                <img class="topRightImage" src="images/TopRight.png" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="middleImage" src="images/MCS.png" />
+            </div>
+            <div class="col-sm-4">
+                <img class="middleImage" src="images/acm.png" />
+            </div>
+            <div class="col-sm-4">
+                <img class="middleImage" src="images/MCU.png" />
+            </div>
+        </div>
         <div>FOOTER</div>
     </div>
 </body>
