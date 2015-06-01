@@ -10,7 +10,7 @@ angular.module("TODO", [])
         var imageCounter = 1;
         var imageRefreshInterval = 5000;
         //Display Image Stuff End
-        changeStoryToEnVer();
+
         //resumeTitle Stuff
         var resumeTitleChVer = ['愿意对工作目标做出承诺',
         '可以专注于工作目标',
@@ -77,6 +77,7 @@ angular.module("TODO", [])
         $scope.introduceItemFontStyle = "enIntroduceItem";
         $scope.projectTitle = "Project experience";
         $scope.titleName = "Wenxiang Guan's Resume";
+        changeStoryToEnVer();
 
         $scope.changeLanguage = function (language) {
             if (language == 'CH') {
@@ -114,6 +115,7 @@ angular.module("TODO", [])
             }
         }
 
+        //Timer for change picture
         setInterval(function () {
             if (imageCounter == imageSum) {
                 changeDisplayPic(imageCounter, 1);
@@ -130,6 +132,7 @@ angular.module("TODO", [])
         var projectRefreshCounter = 0;
         var projectRefreshSum = 8;
         var projectRefreshDir = true;
+        //Timer for change project line
         setInterval(function () {
             if (projectRefreshDir)
                 ++projectRefreshCounter;
