@@ -50,8 +50,7 @@ angular.module("TODO", [])
         '热爱开发，于大一长期进入学院实验室进行开发实践，从大一开始的寒暑假均在相关\
         的公司进行实习工作。大一和大二阶段主要为嵌入式开发的实践。经过大三的过渡，\
         开始在大四转入纯粹的软件开发（.Net为主)。',
-        '热爱学习，从大一开始，除了阅读各类经典专业读物外，会在网易公开课上进行课程\
-        学习，近期在Coursera上跟课。'];
+        '热爱学习，从大一开始，除了阅读各类经典专业读物外，会在网易公开课上进行课程学习，近期在Coursera上跟课。'];
         var slefIntroducelistEnVer = ['My chinese name is Wenxiang Guan and english name is \
         david guan. majoring in EE, will be graduate in \
         the end of June.',
@@ -170,7 +169,7 @@ angular.module("TODO", [])
             $scope.Story1 = 'Freshman and sophomore year, mainly focus on embedded system development, coding for lot\'s of MCU (MSP430, AVR, STM32...). participate in some projects. Main harvest: cultivate the rigorous programming thinking and basic code optimize & debugging method.'
             $scope.Story2 = 'Love reading, learn desktop application development from books in sophomore year, and use this technology in project(communication with embedded system module for conrtol purpose).technical aspect, Main reading classic books, such as：\
             《C# in Depth》,《CLR via C#》,《Pro WPF in C#》,《Agile Principles Patterns and Practices》,《JavaScript: The Definitive Guide》,etc...'
-            $scope.Story3 = 'Persist in coding practise，Writing blog(www.cnblogs.com/E-WALKER),use microsoft TFS (davidguan.visualstudio.com), GITHUB(github.com/EcutDavid) as code repositories.';
+            $scope.Story3 = 'In addition to reading, I also learning new knowledge in education platform(coursera). Persist in coding practise，Writing blog (www.cnblogs.com/E-WALKER), use microsoft TFS (davidguan.visualstudio.com), GITHUB(github.com/EcutDavid) as code repositories.';
             $scope.Story4 = 'Teamwork, careful discussion with team members prior to the start of the sprint, reach a consensus, is the first step in each sprint, if there is problem which cannot solved by team, I will use google and Stack Overflow to search answer.';
             $scope.Story5 = 'Be fond of mountain climbing and walkabout.';
             $scope.Story6 = 'Hope I can join you, coding together, Together to create inspiration！';
