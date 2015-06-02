@@ -52,14 +52,14 @@ angular.module("TODO", [])
         开始在大四转入纯粹的软件开发（.Net为主)。',
         '热爱学习，从大一开始，除了阅读各类经典专业读物外，会在网易公开课上进行课程学习，近期在Coursera上跟课。'];
         var slefIntroducelistEnVer = ['My chinese name is Wenxiang Guan and english name is \
-        david guan. majoring in EE, will be graduate in \
+        David Guan. Majoring in EE, will be graduate in \
         the end of June.',
-        'Love software development, Spend a lot of time to practise career skill in \
+        'Love software development, spend a lot of time to practise career skill in \
         college\'s laboratory in second semester of freshman year. Freshman and \
         sophomore year is mainly for the practice of embedded system development. \
         Junior year, I spend a lots of time in desktop application development. \
         senior year, mainly desktop application development and web development, \
-        intern in Lindge software with a scrum team for 4 month.'];
+        intern in Lindge software on a scrum team for 4 month.'];
         $scope.slefIntroducelist = slefIntroducelistEnVer;
         //Slef introduce Stuff end
 

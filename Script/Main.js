@@ -6,6 +6,8 @@
         { name: "Cracking the Coding Interview", description: "3小时的Coding练习。。" },
         { name: "Check 51JOB", description: "检查。。。"}];
 
+        console.log('script test');
+
         $scope.submit = function () {
             $scope.todoList.push({ name: $scope.nameInputText, description: $scope.descriptionInputText });
         }
